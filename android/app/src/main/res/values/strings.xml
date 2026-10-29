@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">学习助手</string>
+    <string name="title_activity_main">学习助手</string>
+    <string name="package_name">cn.tripagentai.studyapp</string>
+    <string name="custom_url_scheme">cn.tripagentai.studyapp</string>
+</resources>
