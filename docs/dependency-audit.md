@@ -1,5 +1,15 @@
 # 依赖检查（2026-10-29）
 
+## 当前状态：Android 补丁修复后
+
+@capacitor/android、@capacitor/core、@capacitor/cli 已从6.2.1固定到6.2.2，修复 GHSA-rvm3-566m-v7fv。安装后再次执行 npm audit --json：当前为11项告警（4 moderate / 6 high / 1 critical），Android 包已不在告警列表中。没有执行强制升级，也没有迁移到Capacitor 8。
+
+剩余critical来自CLI工具链的tar，不是此次Android运行时修复的同一问题；Vite、路由和其他依赖的告警仍需单独处理。不能把本次修复称为零漏洞或完整安全审计。
+
+说明与验证范围见 [Capacitor补丁记录](security/capacitor-6.2.2.md)。
+
+## 初始检查记录（修复前）
+
 本次使用锁文件执行 npm ci 与 npm audit --json。检查报告：12项已知依赖告警，包含4项moderate、6项high、2项critical。
 
 主要涉及运行时Android桥接包、路由相关依赖，以及CLI、打包器和其传递依赖。这些是npm审计报告，不代表本项目已被证明存在可利用漏洞，也不能据此宣布项目安全。
