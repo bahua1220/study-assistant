@@ -10,6 +10,8 @@ npm run lint
 npm run build
 ```
 
+Android 安全补丁的离线回归：`node tests/capacitor-security.mjs`。它检查锁定/安装版本及原生源码中的导航、HTTP代理防护，不替代真实设备中的WebView攻击测试。
+
 ## Python 离线回归
 
 先安装 backend/requirements.txt，在仓库根目录执行：
